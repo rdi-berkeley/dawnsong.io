@@ -38,9 +38,20 @@ s.parentNode.insertBefore(ga, s);
     border: 2px solid #ccc;
     border-radius: 4px;
     transition: border-color .2s;
+    /* Reserve space to prevent layout shifts */
+    min-width: 150px;
+    min-height: 165px;
   }
   .thumbnail:hover {
     border-color: #888;
+  }
+  
+  /* Twitter widget container to prevent layout shift */
+  .twitter-container {
+    width: 200px; /* Reserve space for Twitter button */
+    height: 30px; /* Reserve height for Twitter button */
+    display: flex;
+    align-items: center;
   }
 </style>
 
@@ -72,9 +83,9 @@ University of California, Berkeley
       </td>
 <td>
 
-
+<div class="twitter-container">
 <a href="https://twitter.com/dawnsongtweets" class="twitter-follow-button" data-show-count="false">Follow @dawnsongtweets</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
+</div>
 
 </td>
     </tr>
