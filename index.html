@@ -21,7 +21,28 @@ s.parentNode.insertBefore(ga, s);
 
 </script>
 
+<style>
+  /* Container to center the thumbnail on the page (optional) */
+  .thumb-container {
+    max-width: 150px;
+    /* margin: 50px auto; */
+  }
 
+  /* The thumbnail itself */
+  .thumbnail {
+    width: 150px;              /* desired thumbnail width */
+    height: 165px;             /* desired thumbnail height */
+    object-fit: cover;         /* crop to fill the box */
+    object-position: top center; /* focus on top/center (i.e. head) */
+    display: block;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    transition: border-color .2s;
+  }
+  .thumbnail:hover {
+    border-color: #888;
+  }
+</style>
 
 <body style="background-color: rgb(255, 255, 255);margin-top:10;margin-left:auto;margin-right:auto;max-width:1000px;font-size:18px;">
 
@@ -29,9 +50,14 @@ s.parentNode.insertBefore(ga, s);
   <tbody>
     <tr>
       <td> 
-        <a href="dawn-berkeley.jpg" target="_blank">
-          <img src="dawn-berkeley.jpg" alt="a picture of dawn" style="width: 150px; height: 180px; object-fit: cover; object-position: center 0%; cursor: pointer;" title="Click to view full size">
-        </a>
+        <div class="thumb-container">
+          <a href="dawn-berkeley.jpg" target="_blank" title="View full-size headshot">
+            <img 
+              src="dawn-berkeley.jpg" 
+              alt="Headshot" 
+              class="thumbnail">
+          </a>
+        </div>
       </td>
       <td><br>
       </td>
@@ -67,7 +93,8 @@ I am also part of the <a href="http://bair.berkeley.edu/">Berkeley Artificial In
 <br>
 <li><b>Publications:</b><br>
   <ul>
-    <li><a href="https://scholar.google.com/citations?user=84WzBlYAAAAJ&hl=en">Google Scholar</a> <a href="https://dblp.org/pid/s/DXSong.html">DBLP</a></li>
+    <li><a href="https://scholar.google.com/citations?user=84WzBlYAAAAJ&hl=en">Google Scholar</a></li>
+    <li><a href="https://dblp.org/pid/s/DXSong.html">DBLP</a></li>
     <li><a href="http://www.cs.berkeley.edu/~dawnsong/publication.html">Past Publications</a></li>
   </ul>
 </li>
